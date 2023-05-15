@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Orientação Vocacional</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app">
+    <h1>Orientação Vocacional</h1>
+    <div id="step-1">
+      <h2>Passo 1: Informações Pessoais</h2>
+      <label for="name">Nome:</label>
+      <input type="text" id="name" required>
+      <label for="studying">Estudando atualmente:</label>
+      <input type="checkbox" id="studying">
+      <label for="past-education">Já estudou anteriormente:</label>
+      <input type="checkbox" id="past-education">
+      <label for="education-year">Ano de conclusão (se aplicável):</label>
+      <input type="number" id="education-year">
+      <button onclick="nextStep(1)">Próximo</button>
+    </div>
+    <div id="step-2" style="display: none;">
+      <h2>Passo 2: Bloco 1</h2>
+      <div class="question-block">
+        <label for="q1">Pergunta 1:</label>
+        <input type="number" id="q1" min="0" max="5" required>
+      </div>
+      <!-- Adicione mais três perguntas neste bloco -->
+      <button onclick="nextStep(2)">Próximo</button>
+    </div>
+    <!-- Repita o código para criar os outros blocos -->
+    <div id="result" style="display: none;">
+      <h2>Resultado:</h2>
+      <p id="final-result"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
