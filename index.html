@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Orientação Vocacional">
+
+    <meta property="og:title" content="Orientação Vocacional">
+    <meta property="og:description" content="Projeto Integrador IV">
+    <meta property="og:image" content="https://tonmarcondes.github.io/orientacaoVocacional/logo.png">
+    <meta property="og:url" content="https://orientacao-vocacional.herokuapp.com/">
     
     <title>Orientação Vocacional</title>
     
@@ -20,24 +27,34 @@
       Orientação Vocacional
     </h1>
     <form id="userForm">
-      <div class="mb-3">
-        <label for="nameInput" class="form-label">Nome do Usuário</label>
-        <input type="text" class="form-control" id="nameInput" required>
+      <div class="dados mb-3">
+        <div class="mb-3">
+          <label for="nameInput" class="form-label">Nome do Usuário</label>
+          <input type="text" class="form-control" id="nameInput" required>
+        </div>
+        <div class="mb-3">
+          <label for="studySelect" class="form-label">Estuda?</label>
+          <select class="form-select" id="studySelect" required>
+            <option value="">Selecione uma opção</option>
+            <option value="yes">Sim</option>
+            <option value="no">Não</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="studyWhenInput" class="form-label">Quando estudou ou estuda?</label>
+          <input type="text" class="form-control" id="studyWhenInput" required>
+        </div>
+        <div class="mb-3 select">
+          <!-- <select id="select"></select> -->
+        </div>
       </div>
-      <div class="mb-3">
-        <label for="studySelect" class="form-label">Estuda?</label>
-        <select class="form-select" id="studySelect" required>
-          <option value="">Selecione uma opção</option>
-          <option value="yes">Sim</option>
-          <option value="no">Não</option>
-        </select>
+      <div class="bloco1 mb-3">
       </div>
-      <div class="mb-3">
-        <label for="studyWhenInput" class="form-label">Quando estudou ou estuda?</label>
-        <input type="text" class="form-control" id="studyWhenInput" required>
+      <div class="bloco2 mb-3">
       </div>
-      <div class="mb-3 select">
-        <!-- <select id="select"></select> -->
+      <div class="bloco3 mb-3">
+      </div>
+      <div class="result mb-3">
       </div>
       <button type="submit" class="btn btn-primary">Iniciar Avaliação</button>
     </form>
