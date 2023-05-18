@@ -22,11 +22,14 @@
 </head>
 <body>
   <div class="container">
-    <h1>
-      <img src="logo.png" alt="logo" width="40rem">
-      Orientação Vocacional
-    </h1>
+    <div class="mt-5 text-center">
+      <img class="mb-3" src="logo.png" alt="logo" width="100rem">
+      <h1>
+        Orientação Vocacional
+      </h1>
+    </div>
     <form id="userForm">
+      <!-- Dados -->
       <div class="dados mb-3">
         <div class="mb-3">
           <label for="nameInput" class="form-label">Nome do Usuário</label>
@@ -41,19 +44,23 @@
           </select>
         </div>
         <div class="mb-3">
-          <label for="studyWhenInput" class="form-label">Quando estudou ou estuda?</label>
-          <input type="text" class="form-control" id="studyWhenInput" required>
+          <label for="studyWhenInput" class="form-label">Quando estudou ou Terminará?</label>
+          <input type="number" inputmode="numeric" placeholder="2015" max="2026" min="1970" minlength="4" maxlength="4" class="form-control" id="studyWhenInput" required>
         </div>
         <div class="mb-3 select">
           <!-- <select id="select"></select> -->
         </div>
       </div>
+      <!-- Bloco 1 -->
       <div class="bloco1 mb-3">
       </div>
+      <!-- Bloco 2 -->
       <div class="bloco2 mb-3">
       </div>
+      <!-- Bloco 3 -->
       <div class="bloco3 mb-3">
       </div>
+      <!-- Resultado -->
       <div class="result mb-3">
       </div>
       <button type="submit" class="btn btn-primary">Iniciar Avaliação</button>
