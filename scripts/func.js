@@ -26,3 +26,17 @@ notas.forEach((nota) => {
   option.innerHTML = nota;
   // select.appendChild(option)
 });
+
+const dados = document.getElementById("dados");
+dados.style.display = "none";
+
+const bloco1 = document.getElementById("bloco1");
+bloco1.style.display = "none";
+
+const bloco2 = document.getElementById("bloco2");
+bloco2.style.display = "none";
+
+const bloco3 = document.getElementById("bloco3");
+bloco3.style.display = "none";
+
+const result = document.getElementById("result");
