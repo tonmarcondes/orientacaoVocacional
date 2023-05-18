@@ -1,70 +1,140 @@
-// Conexão com o banco de dados SQLite
-var db = openDatabase('orientacao_vocacional', '1.0', 'Orientação Vocacional Database', 2 * 1024 * 1024);
+// Evento de envio do formulário do usuário
+document.getElementById('userForm').addEventListener('submit', function(e) {
+  e.preventDefault();
 
-// Criação da tabela para armazenar as respostas
-db.transaction(function(tx) {
-  tx.executeSql('CREATE TABLE IF NOT EXISTS respostas (id INTEGER PRIMARY KEY AUTOINCREMENT, pergunta TEXT, nota INTEGER)');
-});
+  // Obtenha os valores do formulário
+  const name = document.getElementById('nameInput').value;
+  const study = document.getElementById('studySelect').value;
+  const studyWhen = document.getElementById('studyWhenInput').value;
 
-// Variáveis globais
-var currentStep = 1;
-var totalSteps = 5;
-var answers = [];
+  // Salve as informações do usuário no banco de dados SQLite (orientacao.db)
+  // Você precisará usar uma biblioteca JavaScript que suporte o SQLite, como o "sqlite" ou "sql.js"
 
-// Função para avançar para o próximo passo
-function nextStep(step) {
-  if (step === 1) {
-    var name = document.getElementById('name').value;
-    var studying = document.getElementById('studying').checked;
-    var pastEducation = document.getElementById('past-education').checked;
-    var educationYear = document.getElementById('education-year').value;
-    
-    // Salvar as informações pessoais no banco de dados
-    db.transaction(function(tx) {
-      tx.executeSql('INSERT INTO respostas (pergunta, nota) VALUES (?, ?)', ['Nome', name]);
-tx.executeSql('INSERT INTO respostas (pergunta, nota) VALUES (?, ?)', ['Estudando Atualmente', studying ? 1 : 0]);
-tx.executeSql('INSERT INTO respostas (pergunta, nota) VALUES (?, ?)', ['Já estudou anteriormente', pastEducation ? 1 : 0]);
-tx.executeSql('INSERT INTO respostas (pergunta, nota) VALUES (?, ?)', ['Ano de conclusão', educationYear]);
-});
-} else {
-// Salvar as respostas das perguntas no banco de dados
-var currentStepQuestions = document.querySelectorAll('#step-' + (step - 1) + ' .question-block input');
-currentStepQuestions.forEach(function(question) {
-var pergunta = question.previousElementSibling.textContent;
-var nota = parseInt(question.value);
-db.transaction(function(tx) {
-tx.executeSql('INSERT INTO respostas (pergunta, nota) VALUES (?, ?)', [pergunta, nota]);
-});
-});
-}
+  // Exemplo de código usando a biblioteca "sql.js"
+  const sql = window.SQL;
+  const db = new sql.Database();
 
-if (step < totalSteps) {
-// Exibir o próximo passo e ocultar o atual
-document.getElementById('step-' + step).style.display = 'none';
-document.getElementById('step-' + (step + 1)).style.display = 'block';
-currentStep++;
-} else {
-// Exibir o resultado final
-calculateResult();
-document.getElementById('app').style.display = 'none';
-document.getElementById('result').style.display = 'block';
-}
-}
+  // Crie a tabela "users" no banco de dados
+  db.run('CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, study TEXT, studyWhen TEXT)');
 
-// Função para calcular o resultado final
-function calculateResult() {
-db.transaction(function(tx) {
-tx.executeSql('SELECT AVG(nota) AS media, pergunta FROM respostas WHERE pergunta NOT IN ("Nome", "Estudando Atualmente", "Já estudou anteriormente", "Ano de conclusão") GROUP BY pergunta', [], function(tx, results) {
-var finalResult = '';
-for (var i = 0; i < results.rows.length; i++) {
-var row = results.rows.item(i);
-finalResult += row.pergunta + ': ' + row.media + '<br>';
-}
-document.getElementById('final-result').innerHTML = finalResult;
-});
-});
-}
+  // Insira os dados do usuário na tabela
+  db.run(`INSERT INTO users (name, study, studyWhen) VALUES (?, ?, ?)`, [name, study, studyWhen]);
 
-// Iniciar o aplicativo
-nextStep(1);
+  // Exemplo de como criar os blocos de perguntas
+  const numBlocks = 4;
+  const numQuestions = 4;
+  const maxRating = 5;
+
+  // Função para gerar os blocos de perguntas
+  function generateQuestionBlocks() {
+    const container = document.querySelector('.container');
+
+    for (let i = 1; i <= numBlocks; i++) {
+      const blockDiv = document.createElement('div');
+      blockDiv.classList.add('question-block');
+
+      const blockHeading = document.createElement('h2');
+      blockHeading.textContent = `Bloco ${i}`;
+
+      blockDiv.appendChild(blockHeading);
+
+      for (let j = 1; j <= numQuestions; j++) {
+        const questionDiv = document.createElement('div');
+        questionDiv.classList.add('question');
+
+        const questionLabel = document.createElement('label');
+        questionLabel.textContent = `Pergunta ${j}`;
+
+        const ratingInput = document.createElement('input');
+        ratingInput.setAttribute('type', 'number');
+        ratingInput.setAttribute('min', '0');
+        ratingInput.setAttribute('max', maxRating.toString());
+        ratingInput.setAttribute('required', '');
+
+        questionDiv.appendChild(questionLabel);
+        questionDiv.appendChild(ratingInput);
+
+        blockDiv.appendChild(questionDiv);
+      }
+
+      container.appendChild(blockDiv);
+    }
+
+    const submitButton = document.createElement('button');
+    submitButton.setAttribute('type', 'submit');
+    submitButton.classList.add('btn', 'btn-primary');
+    submitButton.textContent = 'Enviar';
+
+    const form = document.createElement('form');
+    form.appendChild(submitButton);
+
+    container.appendChild(form);
+  }
+
+  // Evento de envio do formulário de perguntas
+  document.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const questionBlocks = document.querySelectorAll('.question-block');
+
+    // Verificar se todas as perguntas foram respondidas
+    let allQuestionsAnswered = true;
+
+    questionBlocks.forEach(function(block) {
+      const ratingInputs = block.querySelectorAll('input[type="number"]');
+
+      ratingInputs.forEach(function(input) {
+        if (!input.value) {
+          allQuestionsAnswered = false;
+          return;
+        }
+      });
+    });
+
+    if (!allQuestionsAnswered) {
+      alert('Por favor, responda todas as perguntas.');
+      return;
+    }
+
+    // Salve as respostas no banco de dados SQLite (orientacao.db)
+    // Você precisará adaptar este código para usar a biblioteca SQLite escolhida
+
+    // Exemplo de código usando a biblioteca "sql.js"
+    const answers = [];
+
+    questionBlocks.forEach(function(block) {
+      const ratingInputs = block.querySelectorAll('input[type="number"]');
+
+      ratingInputs.forEach(function(input) {
+        const answer = {
+          block: block.querySelector('h2').textContent,
+          question: input.parentNode.querySelector('label').textContent,
+          rating: input.value
+        };
+
+        answers.push(answer);
+      });
+    });
+
+    // Insira as respostas no banco de dados
+    answers.forEach(function(answer) {
+      db.run(`INSERT INTO answers (block, question, rating) VALUES (?, ?, ?)`, [answer.block, answer.question, answer.rating]);
+    });
+
+    alert('Respostas enviadas com sucesso!');
+  });
+
+  // Chame a função para gerar os blocos de perguntas após o envio do formulário do usuário
+  document.getElementById('userForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    // Resto do código para salvar as informações do usuário no banco de dados
+
+    // Remova o formulário do usuário
+    const userForm = document.getElementById('userForm');
+    userForm.parentNode.removeChild(userForm);
+
+   // Gere os blocos de perguntas após a remoção do formulário do usuário
+  generateQuestionBlocks();
+})();
 
