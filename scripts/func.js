@@ -24,5 +24,5 @@ notas.forEach((nota) => {
   const option = document.createElement("option");
   option.value = nota;
   option.innerHTML = nota;
-  select.appendChild(option)
+  // select.appendChild(option)
 });
