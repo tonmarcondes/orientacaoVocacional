@@ -3,13 +3,13 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/img/logo.png" type="image/x-icon">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="Orientação Vocacional">
 
     <meta property="og:title" content="Orientação Vocacional">
     <meta property="og:description" content="Projeto Integrador IV">
-    <meta property="og:image" content="https://tonmarcondes.github.io/orientacaoVocacional/logo.png">
+    <meta property="og:image" content="https://tonmarcondes.github.io/orientacaoVocacional/assets/img/logo.png">
     <meta property="og:url" content="https://orientacao-vocacional.herokuapp.com/">
     
     <title>Orientação Vocacional</title>
@@ -23,14 +23,14 @@
 <body>
   <div class="container">
     <div class="mt-5 text-center">
-      <img class="mb-3" src="logo.png" alt="logo" width="100rem">
+      <img class="mb-3" src="assets/img/logo.png" alt="logo" width="100rem">
       <h1>
         Orientação Vocacional
       </h1>
     </div>
     <form id="userForm">
       <!-- Dados -->
-      <div class="dados mb-3">
+      <div id="dados" class="mb-3">
         <div class="mb-3">
           <label for="nameInput" class="form-label">Nome do Usuário</label>
           <input type="text" class="form-control" id="nameInput" required>
@@ -48,6 +48,7 @@
           <input type="number" inputmode="numeric" placeholder="2015" max="2026" min="1970" minlength="4" maxlength="4" class="form-control" id="studyWhenInput" required>
         </div>
         <div class="mb-3 select">
+          <button class="btn btn-primary"onclick="showBloco1()">Iniciar Avaliação</button>
           <!-- <select id="select"></select> -->
         </div>
       </div>
@@ -69,6 +70,7 @@
             <label for="pergunta4" class="form-label">4 - Analiso mentalmente mudanças na posição de objetos dentro dos ambientes ao qual me encontro</label>
             <input type="number" class="form-control" id="pergunta4" name="pergunta4" min="0" max="5">
           </div>
+          <button class="btn btn-primary"onclick="showBloco2()">Página 2</button>
         </div>
         <!-- Bloco 2 -->
         <div id="bloco2" class="mb-3">
@@ -88,12 +90,11 @@
           <label for="pergunta8" class="form-label">8 - Sei lidar com pessoas de temperamento difíceis, me relaciono bem com todas as pessoas as quais convivo</label>
           <input type="number" class="form-control" id="pergunta8" name="pergunta8" min="0" max="5">
         </div>
-        
         <div class="mb-3">
           <label for="pergunta9" class="form-label">9 - Posso prever meus sentimentos e comportamentos em determinadas situações com bastante precisão</label>
           <input type="number" class="form-control" id="pergunta9" name="pergunta9" min="0" max="5">
-
         </div>
+        <button class="btn btn-primary"onclick="showBloco3()">Página 3</button>
       </div>
       <!-- Bloco 3 -->
       <div id="bloco3" class="mb-3">
@@ -109,11 +110,12 @@
           <label for="pergunta12" class="form-label">12 - Sempre sei como estou me sentindo</label>
           <input type="number" class="form-control" id="pergunta12" name="pergunta12" min="0" max="5">
         </div>
+        <button class="btn btn-primary"onclick="showResult()">Resultado</button>
       </div>
       <!-- Resultado -->
       <div id="result" class="mb-3">
       </div>
-      <button type="submit" class="btn btn-primary">Iniciar Avaliação</button>
+      <!-- <button class="btn btn-primary" onclick="showDados()">Iniciar Avaliação</button> -->
     </form>
   </div>
 

@@ -136,5 +136,5 @@ document.getElementById('userForm').addEventListener('submit', function(e) {
 
    // Gere os blocos de perguntas após a remoção do formulário do usuário
   generateQuestionBlocks();
-})();
-
+})
+})
