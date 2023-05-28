@@ -38,6 +38,27 @@
         <h1>Orientação Vocacional</h1>
         <h5 id="ola"></h5>
       </div>
+      <!-- Dados -->
+      <div id="dados" class="mb-3">
+        <div class="mb-3">
+          <label for="nameInput" class="form-label">Nome do Usuário</label>
+          <input type="text" class="form-control" id="nameInput" required>
+        </div>
+        <div class="mb-3">
+          <label for="studySelect" class="form-label">Estuda?</label>
+          <select class="form-select" id="studySelect" required>
+            <option value="">Selecione uma opção</option>
+            <option value="yes">Sim</option>
+            <option value="no">Não</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="studyWhenInput" class="form-label">Quando estudou ou Terminará?</label>
+          <input type="number" inputmode="numeric" placeholder="2015" max="2026" min="1970" minlength="4" maxlength="4" class="form-control" id="studyWhenInput" required>
+        </div>
+        <div class="mb-3 select">
+          <button class="btn btn-primary"onclick="showBloco1()">Iniciar Avaliação</button>
+        </div>
       <!-- bloco 1 -->
       <div class="bloco1">
         <div class="mb-4">
