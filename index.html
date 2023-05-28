@@ -15,7 +15,7 @@
     />
     <meta
       property="og:url"
-      content="https://orientacao-vocacional.herokuapp.com/"
+      content="https://tonmarcondes.github.io/orientacaoVocacional/"
     />
 
     <title>Orientação Vocacional</title>
@@ -34,7 +34,9 @@
   <body>
     <div class="container">
       <div class="mt-5 text-center">
-        <img class="mb-3" src="assets/img/logo.png" alt="logo" width="100rem" />
+        <a href="https://tonmarcondes.github.io/orientacaoVocacional/">
+          <img class="mb-3" src="assets/img/logo.png" alt="logo" width="100rem" />
+        </a>
         <h1>Orientação Vocacional</h1>
         <h5 id="ola"></h5>
       </div>
@@ -57,7 +59,7 @@
           <input type="number" inputmode="numeric" placeholder="2015" max="2026" min="1970" minlength="4" maxlength="4" class="form-control" id="studyWhenInput" required>
         </div>
         <div class="mb-3 select">
-          <button class="btn btn-primary"onclick="showBloco1()">Iniciar Avaliação</button>
+          <button class="btn btn-primary" id="btn">Iniciar Avaliação</button>
         </div>
       <!-- bloco 1 -->
       <div class="bloco1">
@@ -191,6 +193,12 @@
         <div class="mb-4">
           <label for="res74" id="per74" class="form-label"></label>
           <input type="text" class="form-control" id="res74">
+        </div>
+      </div>
+      <!-- result -->
+      <div class="result">
+        <div class="mb-4">
+          <canvas id="meuGraficoPizza"></canvas>
         </div>
       </div>
     </div>
