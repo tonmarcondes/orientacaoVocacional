@@ -1,123 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="assets/img/logo.png" type="image/x-icon">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="Orientação Vocacional">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="assets/img/logo.png" type="image/x-icon" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description" content="Orientação Vocacional" />
 
-    <meta property="og:title" content="Orientação Vocacional">
-    <meta property="og:description" content="Projeto Integrador IV">
-    <meta property="og:image" content="https://tonmarcondes.github.io/orientacaoVocacional/assets/img/logo.png">
-    <meta property="og:url" content="https://orientacao-vocacional.herokuapp.com/">
-    
+    <meta property="og:title" content="Orientação Vocacional" />
+    <meta property="og:description" content="Projeto Integrador IV" />
+    <meta
+      property="og:image"
+      content="https://tonmarcondes.github.io/orientacaoVocacional/assets/img/logo.png"
+    />
+    <meta
+      property="og:url"
+      content="https://orientacao-vocacional.herokuapp.com/"
+    />
+
     <title>Orientação Vocacional</title>
-    
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="./scripts/func.js"></script>
-</head>
-<body>
-  <div class="container">
-    <div class="mt-5 text-center">
-      <img class="mb-3" src="assets/img/logo.png" alt="logo" width="100rem">
-      <h1>
-        Orientação Vocacional
-      </h1>
-    </div>
-    <form id="userForm">
-      <!-- Dados -->
-      <div id="dados" class="mb-3">
-        <div class="mb-3">
-          <label for="nameInput" class="form-label">Nome do Usuário</label>
-          <input type="text" class="form-control" id="nameInput" required>
-        </div>
-        <div class="mb-3">
-          <label for="studySelect" class="form-label">Estuda?</label>
-          <select class="form-select" id="studySelect" required>
-            <option value="">Selecione uma opção</option>
-            <option value="yes">Sim</option>
-            <option value="no">Não</option>
-          </select>
-        </div>
-        <div class="mb-3">
-          <label for="studyWhenInput" class="form-label">Quando estudou ou Terminará?</label>
-          <input type="number" inputmode="numeric" placeholder="2015" max="2026" min="1970" minlength="4" maxlength="4" class="form-control" id="studyWhenInput" required>
-        </div>
-        <div class="mb-3 select">
-          <button class="btn btn-primary"onclick="showBloco1()">Iniciar Avaliação</button>
-          <!-- <select id="select"></select> -->
-        </div>
-      </div>
-      <!-- Bloco 1 -->
-      <div id="bloco1" class="mb-3">
-          <div class="mb-3">
-            <label for="pergunta1" class="form-label">1 - Gosto de organizar espaços, imaginar mudanças em ambientes</label>
-            <input type="number" class="form-control" id="pergunta1" name="pergunta1" min="0" max="5">
-          </div>
-          <div class="mb-3">
-            <label for="pergunta2" class="form-label">2 - Observo mudanças no espaço em que estou. Percebo mudanças de cores nos ambientes e locais de objetos</label>
-            <input type="number" class="form-control" id="pergunta2" name="pergunta2" min="0" max="5">
-          </div>
-          <div class="mb-3">
-            <label for="pergunta3" class="form-label">3 - Tenho boa noção de medida visual. Tenho noção de medidas e distâncias aproximadas de locais e objetos apenas pela observação</label>
-            <input type="number" class="form-control" id="pergunta3" name="pergunta3" min="0" max="5">
-          </div>
-          <div class="mb-3">
-            <label for="pergunta4" class="form-label">4 - Analiso mentalmente mudanças na posição de objetos dentro dos ambientes ao qual me encontro</label>
-            <input type="number" class="form-control" id="pergunta4" name="pergunta4" min="0" max="5">
-          </div>
-          <button class="btn btn-primary"onclick="showBloco2()">Página 2</button>
-        </div>
-        <!-- Bloco 2 -->
-        <div id="bloco2" class="mb-3">
-        <div class="mb-3">
-          <label for="pergunta5" class="form-label">5 - Percebo facilmente alteração no humor das pessoas</label>
-          <input type="number" class="form-control" id="pergunta5" name="pergunta5" min="0" max="5">
-        </div>
-        <div class="mb-3">
-          <label for="pergunta6" class="form-label">6 - Tenho empatia, me coloco sempre no lugar das pessoas antes de tomar atitudes</label>
-          <input type="number" class="form-control" id="pergunta6" name="pergunta6" min="0" max="5">
-        </div>
-        <div class="mb-3">
-          <label for="pergunta7" class="form-label">7 - Observo comportamentos e atitudes de outras pessoas</label>
-          <input type="number" class="form-control" id="pergunta7" name="pergunta7" min="0" max="5">
-        </div>
-        <div class="mb-3">
-          <label for="pergunta8" class="form-label">8 - Sei lidar com pessoas de temperamento difíceis, me relaciono bem com todas as pessoas as quais convivo</label>
-          <input type="number" class="form-control" id="pergunta8" name="pergunta8" min="0" max="5">
-        </div>
-        <div class="mb-3">
-          <label for="pergunta9" class="form-label">9 - Posso prever meus sentimentos e comportamentos em determinadas situações com bastante precisão</label>
-          <input type="number" class="form-control" id="pergunta9" name="pergunta9" min="0" max="5">
-        </div>
-        <button class="btn btn-primary"onclick="showBloco3()">Página 3</button>
-      </div>
-      <!-- Bloco 3 -->
-      <div id="bloco3" class="mb-3">
-        <div class="mb-3">
-          <label for="pergunta10" class="form-label">10 - Prefiro esportes individuais</label>
-          <input type="number" class="form-control" id="pergunta10" name="pergunta10" min="0" max="5">
-        </div>
-        <div class="mb-3">
-          <label for="pergunta11" class="form-label">11 - Estabeleço metas e planos para o futuro</label>
-          <input type="number" class="form-control" id="pergunta11" name="pergunta11" min="0" max="5">
-        </div>
-        <div class="mb-3">
-          <label for="pergunta12" class="form-label">12 - Sempre sei como estou me sentindo</label>
-          <input type="number" class="form-control" id="pergunta12" name="pergunta12" min="0" max="5">
-        </div>
-        <button class="btn btn-primary"onclick="showResult()">Resultado</button>
-      </div>
-      <!-- Resultado -->
-      <div id="result" class="mb-3">
-      </div>
-      <!-- <button class="btn btn-primary" onclick="showDados()">Iniciar Avaliação</button> -->
-    </form>
-  </div>
 
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="./main.js" type="module"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="mt-5 text-center">
+        <img class="mb-3" src="assets/img/logo.png" alt="logo" width="100rem" />
+        <h1>Orientação Vocacional</h1>
+        <h5 id="ola"></h5>
+      </div>
+      <!-- bloco 1 -->
+      <div class="bloco1">
+        <div class="mb-4">
+          <label for="res11" id="per11" class="form-label"></label>
+          <input type="text" class="form-control" id="res11">
+        </div>
+        <div class="mb-4">
+          <label for="res12" id="per12" class="form-label"><td-search-box placeholder="Search" (search)="onSearch(event)" (clear)="onClear()" backIcon="arrow_back" [showUnderline]="false" [alwaysVisible]="true">
+          </td-search-box></label>
+          <input type="text" class="form-control" id="res12">
+        </div>
+        <div class="mb-4">
+          <label for="res13" id="per13" class="form-label"></label>
+          <input type="text" class="form-control" id="res13">
+        </div>
+        <div class="mb-4">
+          <label for="res14" id="per14" class="form-label"></label>
+          <input type="text" class="form-control" id="res14">
+        </div>
+      </div>
+      <!-- bloco 2 -->
+      <div class="bloco2">
+        <div class="mb-4">
+          <label for="res21" id="per21" class="form-label"></label>
+          <input type="text" class="form-control" id="res21">
+        </div>
+        <div class="mb-4">
+          <label for="res22" id="per22" class="form-label"></label>
+          <input type="text" class="form-control" id="res22">
+        </div>
+        <div class="mb-4">
+          <label for="res23" id="per23" class="form-label"></label>
+          <input type="text" class="form-control" id="res23">
+        </div>
+        <div class="mb-4">
+          <label for="res24" id="per24" class="form-label"></label>
+          <input type="text" class="form-control" id="res24">
+        </div>
+      </div>
+      <!-- bloco 3 -->
+      <div class="bloco3">
+        <div class="mb-4">
+          <label for="res31" id="per31" class="form-label"></label>
+          <input type="text" class="form-control" id="res31">
+        </div>
+        <div class="mb-4">
+          <label for="res32" id="per32" class="form-label"></label>
+          <input type="text" class="form-control" id="res32">
+        </div>
+        <div class="mb-4">
+          <label for="res33" id="per33" class="form-label"></label>
+          <input type="text" class="form-control" id="res33">
+        </div>
+        <div class="mb-4">
+          <label for="res34" id="per34" class="form-label"></label>
+          <input type="text" class="form-control" id="res34">
+        </div>
+      </div>
+      <!-- bloco 4 -->
+      <div class="bloco4">
+        <div class="mb-4">
+          <label for="res41" id="per41" class="form-label"></label>
+          <input type="text" class="form-control" id="res41">
+        </div>
+        <div class="mb-4">
+          <label for="res42" id="per42" class="form-label"></label>
+          <input type="text" class="form-control" id="res42">
+        </div>
+        <div class="mb-4">
+          <label for="res43" id="per43" class="form-label"></label>
+          <input type="text" class="form-control" id="res43">
+        </div>
+        <div class="mb-4">
+          <label for="res44" id="per44" class="form-label"></label>
+          <input type="text" class="form-control" id="res44">
+        </div>
+      </div>
+      <!-- bloco 5 -->
+      <div class="bloco5">
+        <div class="mb-4">
+          <label for="res51" id="per51" class="form-label"></label>
+          <input type="text" class="form-control" id="res51">
+        </div>
+        <div class="mb-4">
+          <label for="res52" id="per52" class="form-label"></label>
+          <input type="text" class="form-control" id="res52">
+        </div>
+        <div class="mb-4">
+          <label for="res53" id="per53" class="form-label"></label>
+          <input type="text" class="form-control" id="res53">
+        </div>
+        <div class="mb-4">
+          <label for="res54" id="per54" class="form-label"></label>
+          <input type="text" class="form-control" id="res54">
+        </div>
+      </div>
+      <!-- bloco 6 -->
+      <div class="bloco6">
+        <div class="mb-4">
+          <label for="res61" id="per61" class="form-label"></label>
+          <input type="text" class="form-control" id="res61">
+        </div>
+        <div class="mb-4">
+          <label for="res62" id="per62" class="form-label"></label>
+          <input type="text" class="form-control" id="res62">
+        </div>
+        <div class="mb-4">
+          <label for="res63" id="per63" class="form-label"></label>
+          <input type="text" class="form-control" id="res63">
+        </div>
+        <div class="mb-4">
+          <label for="res64" id="per64" class="form-label"></label>
+          <input type="text" class="form-control" id="res64">
+        </div>
+      </div>
+      <!-- bloco 7 -->
+      <div class="bloco7">
+        <div class="mb-4">
+          <label for="res71" id="per71" class="form-label"></label>
+          <input type="text" class="form-control" id="res71">
+        </div>
+        <div class="mb-4">
+          <label for="res72" id="per72" class="form-label"></label>
+          <input type="text" class="form-control" id="res72">
+        </div>
+        <div class="mb-4">
+          <label for="res73" id="per73" class="form-label"></label>
+          <input type="text" class="form-control" id="res73">
+        </div>
+        <div class="mb-4">
+          <label for="res74" id="per74" class="form-label"></label>
+          <input type="text" class="form-control" id="res74">
+        </div>
+      </div>
+    </div>
+  </body>
 </html>

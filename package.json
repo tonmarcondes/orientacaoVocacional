@@ -1,0 +1,32 @@
+{
+  "name": "orientacaovocacional",
+  "version": "1.0.0",
+  "description": "Teste de orientação vocacional",
+  "main": "scripts/func.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tonmarcondes/orientacaoVocacional.git"
+  },
+  "keywords": [
+    "vocacional",
+    "orientacao",
+    "escola",
+    "profissao",
+    "area"
+  ],
+  "author": "Wellyngton Marcondes",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tonmarcondes/orientacaoVocacional/issues"
+  },
+  "homepage": "https://github.com/tonmarcondes/orientacaoVocacional#readme",
+  "dependencies": {
+    "chart.js": "^4.3.0",
+    "require": "^0.4.4",
+    "sqlite3": "^5.1.6"
+  }
+}

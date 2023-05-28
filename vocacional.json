@@ -1,0 +1,114 @@
+    [
+    	{
+			"question":"Gosto de escrever um conjunto de instruções",
+			"category":"1"
+		},
+    	{
+			"question":"Quando tenho tempo gosto de editar uma peça escrita ou trabalho, ou escrever um discurso",
+			"category":"1"
+		},
+    	{
+			"question":"Quando estou em eventos gosto opinar em ou aplicar uma tendência positiva ou negativa para uma história ou um tema",
+			"category":"1"
+		},
+    	{
+			"question":"Gosto de editar uma peça.",
+			"category":"1"
+		},
+    	{
+			"question":"Gosto de realizar um cálculo aritmético mental, realizar varias contas.",
+			"category":"2"
+		},
+    	{
+			"question":"Gosto de criar um processo para medir algo difícil",
+			"category":"2"
+		},
+    	{
+			"question":"Desde criança gosto de analisar como a máquina funciona, criar um processo",
+			"category":"2"
+		},
+    	{
+			"question":"Antes fazer um trabalho gosto de elaborar uma estratégia para alcançar um objetivo, avaliar o valor de um negócio ou de uma proposta",
+			"category":"2"
+		},
+    	{
+			"question":"Você gosta de ouvir musica",
+			"category":"3"
+		},
+    	{
+			"question":"Quando ouve as musicas que gosta você canta junto",
+			"category":"3"
+		},
+    	{
+			"question":"Você tenta cantar parecido com o cantor",
+			"category":"3"
+		},
+    	{
+			"question":"Você já teve vontade de aprender a tocar instrumentos musicais e cantar",
+			"category":"3"
+		},
+    	{
+			"question":"Você gosta de dançar",
+			"category":"4"
+		},
+    	{
+			"question":"Quando ouve música, você fica parado ou começa a movimentar mãos, pés e até mesmo dança",
+			"category":"4"
+		},
+    	{
+			"question":"Você costuma a gravar os passos de dança das suas músicas favoritas",
+			"category":"4"
+		},
+    	{
+			"question":"Faz alongamentos para ter o corpo mais leve, mais movimentos nas articulações",
+			"category":"4"
+		},
+    	{
+			"question":"Gosto de organizar espaços, imaginar mudanças em ambientes",
+			"category":"5"
+		},
+    	{
+			"question":"Observo mudanças no espaço em que estou. Percebo mudanças de cores nos ambientes e locais de objetos",
+			"category":"5"
+		},
+    	{
+			"question":"Tenho boa noção de medida visual. Tenho noção de medidas e distâncias aproximadas de locais e objetos apenas pela observação",
+			"category":"5"
+		},
+    	{
+			"question":"Analiso mentalmente mudanças na posição de objetos dentro dos ambientes ao qual me encontro",
+			"category":"5"
+		},
+    	{
+			"question":"Percebo facilmente alteração no humor das pessoas",
+			"category":"6"
+		},
+    	{
+			"question":"Tenho empatia, me coloco sempre no lugar das pessoas antes de tomar atitudes",
+			"category":"6"
+		},
+    	{
+			"question":"Observo comportamentos e atitudes de outras pessoas",
+			"category":"6"
+		},
+    	{
+			"question":"Sei lidar com pessoas de temperamento difíceis, me relaciono bem com todas as pessoas as quais convivo",
+			"category":"6"
+		},
+    	{
+			"question":"Posso prever meus sentimentos e comportamentos em determinadas situações com bastante precisão",
+			"category":"7"
+		},
+    	{
+			"question":"Prefiro esportes individuais",
+			"category":"7"
+		},
+    	{
+			"question":"Estabeleço metas e planos para o futuro",
+			"category":"7"
+		},
+    	{
+			"question":"Sempre sei como estou me sentindo",
+			"category":"7"
+        }
+    ]
