@@ -56,149 +56,186 @@
         </div>
         <div class="mb-3">
           <label for="studyWhenInput" class="form-label">Quando estudou ou Terminará?</label>
-          <input type="number" inputmode="numeric" placeholder="2015" max="2026" min="1970" minlength="4" maxlength="4" class="form-control" id="studyWhenInput" required>
+          <input type="number" inputmode="numeric" placeholder="2015" min="1970"maxlength="4" class="form-control" id="studyWhenInput" required>
         </div>
         <div class="mb-3 select">
-          <button class="btn btn-primary" id="btn">Iniciar Avaliação</button>
+          <button class="btn btn-primary" id="b1">Iniciar Avaliação</button>
         </div>
+      </div>
       <!-- bloco 1 -->
-      <div class="bloco1">
+      <div id="bloco1" style="display: none;">
         <div class="mb-4">
           <label for="res11" id="per11" class="form-label"></label>
-          <input inputmode="numeric" type="number" class="form-control" id="res11" max="5" maxlength="1" required>
+          <input inputmode="numeric" type="number" class="form-control" id="res11" min="1" max="5" maxlength="1" value="1" required>
         </div>
         <div class="mb-4">
           <label for="res12" id="per12" class="form-label"><td-search-box placeholder="Search" (search)="onSearch(event)" (clear)="onClear()" backIcon="arrow_back" [showUnderline]="false" [alwaysVisible]="true">
           </td-search-box></label>
-          <input inputmode="numeric" type="number" class="form-control" id="res12" max="5" maxlength="1" required>
+          <input inputmode="numeric" type="number" class="form-control" id="res12" min="1" max="5" maxlength="1" value="1" required>
         </div>
         <div class="mb-4">
           <label for="res13" id="per13" class="form-label"></label>
-          <input inputmode="numeric" type="number" class="form-control" id="res13" max="5" maxlength="1" required>
+          <input inputmode="numeric" type="number" class="form-control" id="res13" min="1" max="5" maxlength="1" value="1" required>
         </div>
         <div class="mb-4">
           <label for="res14" id="per14" class="form-label"></label>
-          <input inputmode="numeric" type="number" class="form-control" id="res14" max="5" maxlength="1" required>
+          <input inputmode="numeric" type="number" class="form-control" id="res14" min="1" max="5" maxlength="1" value="1" required>
+        </div>
+        <div class="mb-3">
+          <button class="btn btn-primary" id="b2">Continuar</button>
         </div>
       </div>
       <!-- bloco 2 -->
-      <div class="bloco2">
+      <div id="bloco2" style="display: none;">
         <div class="mb-4">
           <label for="res21" id="per21" class="form-label"></label>
-          <input inputmode="numeric" type="number" class="form-control" id="res21" max="5" maxlength="1" required>
+          <input inputmode="numeric" type="number" class="form-control" id="res21" min="1" max="5" maxlength="1" value="1" required>
         </div>
         <div class="mb-4">
           <label for="res22" id="per22" class="form-label"></label>
-          <input inputmode="numeric" type="number" class="form-control" id="res22" max="5" maxlength="1" required>
+          <input inputmode="numeric" type="number" class="form-control" id="res22" min="1" max="5" maxlength="1" value="1" required>
         </div>
         <div class="mb-4">
           <label for="res23" id="per23" class="form-label"></label>
-          <input inputmode="numeric" type="number" class="form-control" id="res23" max="5" maxlength="1" required>
+          <input inputmode="numeric" type="number" class="form-control" id="res23" min="1" max="5" maxlength="1" value="1" required>
         </div>
         <div class="mb-4">
           <label for="res24" id="per24" class="form-label"></label>
-          <input inputmode="numeric" type="number" class="form-control" id="res24" max="5" maxlength="1" required>
+          <input inputmode="numeric" type="number" class="form-control" id="res24" min="1" max="5" maxlength="1" value="1" required>
+        </div>
+        <div class="mb-3">
+          <button class="btn btn-primary" id="b3">Continuar</button>
         </div>
       </div>
       <!-- bloco 3 -->
-      <div class="bloco3">
+      <div id="bloco3" style="display: none;">
         <div class="mb-4">
           <label for="res31" id="per31" class="form-label"></label>
-          <input inputmode="numeric" type="number" class="form-control" id="res31" max="5" maxlength="1" required>
+          <input inputmode="numeric" type="number" class="form-control" id="res31" min="1" max="5" maxlength="1" value="1" required>
         </div>
         <div class="mb-4">
           <label for="res32" id="per32" class="form-label"></label>
-          <input inputmode="numeric" type="number" class="form-control" id="res32" max="5" maxlength="1" required>
+          <input inputmode="numeric" type="number" class="form-control" id="res32" min="1" max="5" maxlength="1" value="1" required>
         </div>
         <div class="mb-4">
           <label for="res33" id="per33" class="form-label"></label>
-          <input inputmode="numeric" type="number" class="form-control" id="res33" max="5" maxlength="1" required>
+          <input inputmode="numeric" type="number" class="form-control" id="res33" min="1" max="5" maxlength="1" value="1" required>
         </div>
         <div class="mb-4">
           <label for="res34" id="per34" class="form-label"></label>
-          <input inputmode="numeric" type="number" class="form-control" id="res34" max="5" maxlength="1" required>
+          <input inputmode="numeric" type="number" class="form-control" id="res34" min="1" max="5" maxlength="1" value="1" required>
+        </div>
+        <div class="mb-3">
+          <button class="btn btn-primary" id="b4">Continuar</button>
         </div>
       </div>
       <!-- bloco 4 -->
-      <div class="bloco4">
+      <div id="bloco4" style="display: none;">
         <div class="mb-4">
           <label for="res41" id="per41" class="form-label"></label>
-          <input inputmode="numeric" type="number" class="form-control" id="res41" max="5" maxlength="1" required>
+          <input inputmode="numeric" type="number" class="form-control" id="res41" min="1" max="5" maxlength="1" value="1" required>
         </div>
         <div class="mb-4">
           <label for="res42" id="per42" class="form-label"></label>
-          <input inputmode="numeric" type="number" class="form-control" id="res42" max="5" maxlength="1" required>
+          <input inputmode="numeric" type="number" class="form-control" id="res42" min="1" max="5" maxlength="1" value="1" required>
         </div>
         <div class="mb-4">
           <label for="res43" id="per43" class="form-label"></label>
-          <input inputmode="numeric" type="number" class="form-control" id="res43" max="5" maxlength="1" required>
+          <input inputmode="numeric" type="number" class="form-control" id="res43" min="1" max="5" maxlength="1" value="1" required>
         </div>
         <div class="mb-4">
           <label for="res44" id="per44" class="form-label"></label>
-          <input inputmode="numeric" type="number" class="form-control" id="res44" max="5" maxlength="1" required>
+          <input inputmode="numeric" type="number" class="form-control" id="res44" min="1" max="5" maxlength="1" value="1" required>
+        </div>
+        <div class="mb-3">
+          <button class="btn btn-primary" id="b5">Continuar</button>
         </div>
       </div>
       <!-- bloco 5 -->
-      <div class="bloco5">
+      <div id="bloco5" style="display: none;">
         <div class="mb-4">
           <label for="res51" id="per51" class="form-label"></label>
-          <input inputmode="numeric" type="number" class="form-control" id="res51" max="5" maxlength="1" required>
+          <input inputmode="numeric" type="number" class="form-control" id="res51" min="1" max="5" maxlength="1" value="1" required>
         </div>
         <div class="mb-4">
           <label for="res52" id="per52" class="form-label"></label>
-          <input inputmode="numeric" type="number" class="form-control" id="res52" max="5" maxlength="1" required>
+          <input inputmode="numeric" type="number" class="form-control" id="res52" min="1" max="5" maxlength="1" value="1" required>
         </div>
         <div class="mb-4">
           <label for="res53" id="per53" class="form-label"></label>
-          <input inputmode="numeric" type="number" class="form-control" id="res53" max="5" maxlength="1" required>
+          <input inputmode="numeric" type="number" class="form-control" id="res53" min="1" max="5" maxlength="1" value="1" required>
         </div>
         <div class="mb-4">
           <label for="res54" id="per54" class="form-label"></label>
-          <input inputmode="numeric" type="number" class="form-control" id="res54" max="5" maxlength="1" required>
+          <input inputmode="numeric" type="number" class="form-control" id="res54" min="1" max="5" maxlength="1" value="1" required>
+        </div>
+        <div class="mb-3">
+          <button class="btn btn-primary" id="b6">Continuar</button>
         </div>
       </div>
       <!-- bloco 6 -->
-      <div class="bloco6">
+      <div id="bloco6" style="display: none;">
         <div class="mb-4">
           <label for="res61" id="per61" class="form-label"></label>
-          <input inputmode="numeric" type="number" class="form-control" id="res61" max="5" maxlength="1" required>
+          <input inputmode="numeric" type="number" class="form-control" id="res61" min="1" max="5" maxlength="1" value="1" required>
         </div>
         <div class="mb-4">
           <label for="res62" id="per62" class="form-label"></label>
-          <input inputmode="numeric" type="number" class="form-control" id="res62" max="5" maxlength="1" required>
+          <input inputmode="numeric" type="number" class="form-control" id="res62" min="1" max="5" maxlength="1" value="1" required>
         </div>
         <div class="mb-4">
           <label for="res63" id="per63" class="form-label"></label>
-          <input inputmode="numeric" type="number" class="form-control" id="res63" max="5" maxlength="1" required>
+          <input inputmode="numeric" type="number" class="form-control" id="res63" min="1" max="5" maxlength="1" value="1" required>
         </div>
         <div class="mb-4">
           <label for="res64" id="per64" class="form-label"></label>
-          <input inputmode="numeric" type="number" class="form-control" id="res64" max="5" maxlength="1" required>
+          <input inputmode="numeric" type="number" class="form-control" id="res64" min="1" max="5" maxlength="1" value="1" required>
+        </div>
+        <div class="mb-3">
+          <button class="btn btn-primary" id="b7">Continuar</button>
         </div>
       </div>
       <!-- bloco 7 -->
-      <div class="bloco7">
+      <div id="bloco7" style="display: none;">
         <div class="mb-4">
           <label for="res71" id="per71" class="form-label"></label>
-          <input inputmode="numeric" type="number" class="form-control" id="res71" max="5" maxlength="1" required>
+          <input inputmode="numeric" type="number" class="form-control" id="res71" min="1" max="5" maxlength="1" value="1" required>
         </div>
         <div class="mb-4">
           <label for="res72" id="per72" class="form-label"></label>
-          <input inputmode="numeric" type="number" class="form-control" id="res72" max="5" maxlength="1" required>
+          <input inputmode="numeric" type="number" class="form-control" id="res72" min="1" max="5" maxlength="1" value="1" required>
         </div>
         <div class="mb-4">
           <label for="res73" id="per73" class="form-label"></label>
-          <input inputmode="numeric" type="number" class="form-control" id="res73" max="5" maxlength="1" required>
+          <input inputmode="numeric" type="number" class="form-control" id="res73" min="1" max="5" maxlength="1" value="1" required>
         </div>
         <div class="mb-4">
           <label for="res74" id="per74" class="form-label"></label>
-          <input inputmode="numeric" type="number" class="form-control" id="res74" max="5" maxlength="1" required>
+          <input inputmode="numeric" type="number" class="form-control" id="res74" min="1" max="5" maxlength="1" value="1" required>
+        </div>
+        <div class="mb-3">
+          <button class="btn btn-primary" id="btResult">Resultado</button>
         </div>
       </div>
       <!-- result -->
-      <div class="result">
+      <div id="result" style="display: none;">
         <div class="mb-4">
+          <div>
+            
+            <p id="nomeDoUsuario"></p><br>
+          </div>
           <canvas id="meuGraficoPizza"></canvas>
+          <br><br>
+          <div class="mt-lg-4">
+            <h5>Profissões de acordo com cada inteligência:</h5>
+              <p><b>Linguística	</b>escritores, advogados, jornalistas, palestrantes, instrutores, redatores, professores de inglês, poetas, editores, linguistas, tradutores, relações públicas, consultores de mídia, apresentadores de TV e rádio</p>
+              <p><b>Lógico-Matemática</b>	cientistas, engenheiros, especialistas em informática, contadores, estatísticos, pesquisadores, analistas, comerciantes, banqueiros, corretores de seguros, negociadores, solucionadores de problemas, diretores</p>
+              <p><b>Musical</b>	músicos, cantores, compositores, DJs, produtores musicais, afinadores de piano, engenheiros acústicos, artistas, planejadores de festas, consultores de meio ambiente e ruídos, treinadores de voz</p>
+              <p><b>Corporal-Cinestésica</b>	dançarinos, demonstradores, atores, esportistas, mergulhadores, esportes pessoais, soldados, bombeiros, artistas performáticos; ergonomistas, osteopatas, pescadores, motoristas, artesãos, jardineiros, cozinheiros, acupunturistas, terapêutas alternativos, aventureiros</p>
+              <p><b>Espacial Visual</b>	arquitetos, designers, desenhistas, fotógrafos e peritos criminais</p>
+              <p><b>Interpessoal</b>	educadores, médicos, terapeutas, assistente sociais</p>
+              <p><b>Intrapessoal</b>	psicólogos, publicitários e escritores</p>
+          </div>
         </div>
       </div>
     </div>
